@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧸 Ropa y Pijamas - Lista de Deseos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="snow-container"></div>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">🎄 Mis Deseos 2026</a>
+        <div class="nav-links">
+            <a href="index.html">🏠 Inicio</a>
+            <a href="ropa.html" class="active">🧸 Ropa y Pijamas</a>
+            <a href="munecas.html">🦇 Monster High</a>
+            <button class="btn-whatsapp-nav" onclick="copiarResumenWhatsApp()">
+                📋 Copiar elegidos (<span class="reserva-count">0</span>)
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero" style="padding: 1.8rem;">
+            <h1>🧸 Ropa, Pantuflas y Pijamas de Bambi</h1>
+            <p style="margin-bottom: 0;">
+                Modelos de pantuflas de invierno y prendas de la colección <strong>Disney Bambi de Primark</strong>.
+            </p>
+        </section>
+
+        <div class="filters">
+            <button class="filter-btn active" onclick="filtrarRopa('Todas', this)">Ver Todo (7)</button>
+            <button class="filter-btn" onclick="filtrarRopa('Pantuflas', this)">🧦 Pantuflas (4)</button>
+            <button class="filter-btn" onclick="filtrarRopa('Pijamas Bambi', this)">🦌 Pijamas Bambi Primark (3)</button>
+        </div>
+
+        <section id="ropa-container" class="gifts-grid"></section>
+    </main>
+
+    <footer>
+        Hecho con espíritu navideño ✨ · <a href="index.html" style="color: #fef3c7;">Volver al inicio</a>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        let filtroActual = "Todas";
+
+        function renderRopa() {
+            const container = document.getElementById("ropa-container");
+            const reservas = obtenerReservas();
+            container.innerHTML = "";
+
+            const filtrados = REGALOS_DATA.ropa.filter(item =>
+                filtroActual === "Todas" || item.categoria === filtroActual
+            );
+
+            filtrados.forEach(item => {
+                const estaReservado = !!reservas[item.id];
+                const card = document.createElement("article");
+                card.className = `gift-card ${estaReservado ? "reserved" : ""}`;
+                card.innerHTML = `
+                    <div>
+                        <span class="gift-tag">${item.categoria} · ${item.tienda}</span>
+                        <div class="gift-emoji">${item.emoji}</div>
+                        <h3 class="gift-title">${item.nombre}</h3>
+                        <p class="gift-desc">${item.descripcion}</p>
+                    </div>
+                    <button class="btn-reserve" onclick="manejarReservaRopa('${item.id}', '${item.nombre}')">
+                        ${estaReservado ? "✅ ¡Reservado por mí! (Quitar)" : "🎁 ¡Yo lo regalo!"}
+                    </button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filtrarRopa(categoria, btn) {
+            filtroActual = categoria;
+            document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            renderRopa();
+        }
+
+        function manejarReservaRopa(id, nombre) {
+            toggleReserva(id, `${nombre} (Ropa/Pijama)`);
+            renderRopa();
+        }
+
+        document.addEventListener("DOMContentLoaded", renderRopa);
+    </script>
+</body>
+</html>

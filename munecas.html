@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦇 Monster High - Lista de Deseos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="snow-container"></div>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">🎄 Mis Deseos 2026</a>
+        <div class="nav-links">
+            <a href="index.html">🏠 Inicio</a>
+            <a href="ropa.html">🧸 Ropa y Pijamas</a>
+            <a href="munecas.html" class="active">🦇 Monster High</a>
+            <button class="btn-whatsapp-nav" onclick="copiarResumenWhatsApp()">
+                📋 Copiar elegidos (<span class="reserva-count">0</span>)
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero" style="padding: 1.8rem;">
+            <h1>🦇 Colección Monster High</h1>
+            <p style="margin-bottom: 0;">
+                Organizadas por línea y colección. <strong>Nefera de Nile (Básica)</strong> es mi Opción 1 favorita ⭐
+            </p>
+        </section>
+
+        <div class="filters" id="lineas-filters"></div>
+        <div id="munecas-container"></div>
+    </main>
+
+    <footer>
+        Hecho con espíritu navideño ✨ · <a href="index.html" style="color: #fef3c7;">Volver al inicio</a>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        let lineaSeleccionada = "Todas";
+
+        function inicializarFiltros() {
+            const filterContainer = document.getElementById("lineas-filters");
+            const lineas = ["Todas", ...new Set(REGALOS_DATA.munecas.map(m => m.linea))];
+
+            lineas.forEach(linea => {
+                const btn = document.createElement("button");
+                btn.className = `filter-btn ${linea === "Todas" ? "active" : ""}`;
+                btn.textContent = linea === "Todas" ? "✨ Todas las líneas" : linea;
+                btn.onclick = () => {
+                    lineaSeleccionada = linea;
+                    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    renderMunecas();
+                };
+                filterContainer.appendChild(btn);
+            });
+        }
+
+        function renderMunecas() {
+            const container = document.getElementById("munecas-container");
+            const reservas = obtenerReservas();
+            container.innerHTML = "";
+
+            const filtradas = REGALOS_DATA.munecas.filter(m =>
+                lineaSeleccionada === "Todas" || m.linea === lineaSeleccionada
+            );
+
+            // Agrupar por línea
+            const grupos = {};
+            filtradas.forEach(m => {
+                if (!grupos[m.linea]) grupos[m.linea] = [];
+                grupos[m.linea].push(m);
+            });
+
+            Object.keys(grupos).forEach(linea => {
+                const section = document.createElement("section");
+                section.className = "collection-section";
+
+                const title = document.createElement("h2");
+                title.className = "collection-title";
+                title.textContent = `🦇 ${linea}`;
+                section.appendChild(title);
+
+                const grid = document.createElement("div");
+                grid.className = "gifts-grid";
+
+                grupos[linea].forEach(m => {
+                    const estaReservado = !!reservas[m.id];
+                    const card = document.createElement("article");
+                    card.className = `gift-card ${m.prioridad ? "priority" : ""} ${estaReservado ? "reserved" : ""}`;
+                    card.innerHTML = `
+                        ${m.prioridad ? '<span class="badge-priority">⭐ OPCIÓN 1</span>' : ''}
+                        <div>
+                            <span class="gift-tag">${m.linea}</span>
+                            <h3 class="gift-title">${m.nombre}</h3>
+                            <p class="gift-desc">${m.nota}</p>
+                        </div>
+                        <button class="btn-reserve" onclick="manejarReservaMuneca('${m.id}', '${m.nombre}', '${m.linea}')">
+                            ${estaReservado ? "✅ ¡Reservada por mí! (Quitar)" : "🎁 ¡Yo la regalo!"}
+                        </button>
+                    `;
+                    grid.appendChild(card);
+                });
+
+                section.appendChild(grid);
+                container.appendChild(section);
+            });
+        }
+
+        function manejarReservaMuneca(id, nombre, linea) {
+            toggleReserva(id, `Monster High: ${nombre} (${linea})`);
+            renderMunecas();
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            inicializarFiltros();
+            renderMunecas();
+        });
+    </script>
+</body>
+</html>

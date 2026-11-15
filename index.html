@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 Mi Lista de Deseos - Cumple y Navidad 2026</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="snow-container"></div>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">🎄 Mis Deseos 2026</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">🏠 Inicio</a>
+            <a href="ropa.html">🧸 Ropa y Pijamas</a>
+            <a href="munecas.html">🦇 Monster High</a>
+            <button class="btn-whatsapp-nav" onclick="copiarResumenWhatsApp()">
+                📋 Copiar elegidos (<span class="reserva-count">0</span>)
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1>🎅 ¡Bienvenido a mi Lista de Regalos! 🎁</h1>
+            <p>
+                Aquí tenéis todas las ideas para mi cumpleaños y Navidad bien organizadas por secciones.
+                Si decidís regalarme algo, podéis pulsar en <strong>"¡Yo lo regalo!"</strong> y luego usar el botón
+                verde de arriba para copiar vuestra selección y avisar por el grupo familiar.
+            </p>
+            <div style="background: #fef3c7; border: 1px dashed #d97706; padding: 0.8rem 1.2rem; border-radius: 12px; display: inline-block; color: #92400e; font-weight: 600;">
+                ⭐ Regalo Estrella / Opción 1: <strong>Muñeca Nefera de Nile (Básica)</strong>
+            </div>
+        </section>
+
+        <section class="category-grid">
+            <a href="ropa.html" class="category-card">
+                <div>
+                    <div class="category-icon">🦌🧦</div>
+                    <h2>Ropa, Pantuflas y Pijamas</h2>
+                    <p>
+                        Pantuflas calentitas (Pingu, bastones de caramelo, fresitas y lazos) y la colección
+                        de pijamas y bata de <strong>Bambi de Primark</strong>.
+                    </p>
+                </div>
+                <span class="btn-primary">Ver Ropa y Pijamas →</span>
+            </a>
+
+            <a href="munecas.html" class="category-card">
+                <div>
+                    <div class="category-icon">🦇💜</div>
+                    <h2>Muñecas Monster High</h2>
+                    <p>
+                        Todas las muñecas que busco organizadas por colección: Básicas (con <strong>Nefera como Opción 1</strong>),
+                        Sweet 1600, Dead Tired, Ghouls Night Out y más.
+                    </p>
+                </div>
+                <span class="btn-primary">Ver Monster High →</span>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        Hecho con espíritu navideño ✨ · Lista de deseos 2026
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
