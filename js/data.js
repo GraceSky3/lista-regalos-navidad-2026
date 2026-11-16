@@ -5,9 +5,9 @@ const REGALOS_DATA = {
             categoria: "Pantuflas",
             nombre: "Pantuflas Negras Pingu",
             tienda: "Primark / Similar",
-            descripcion: "Pantuflas mullidas negras con carita de pingüino (ojitos y pico rojo).",
+            descripcion: "Calcetines zapatilla Pingu con suela antideslizante",
             prioridad: false,
-            emoji: "🐧"
+            foto: "./Pingu.webp" 
         },
         {
             id: "ropa-2",
