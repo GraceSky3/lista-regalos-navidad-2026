@@ -23,10 +23,8 @@
 
     <main class="container">
         <section class="hero" style="padding: 1.8rem;">
-            <h1>🧸 Ropa, Pantuflas y Pijamas de Bambi</h1>
-            <p style="margin-bottom: 0;">
-                Modelos de pantuflas de invierno y prendas de la colección <strong>Disney Bambi de Primark</strong>.
-            </p>
+            <h1>🧸 Ropa y Pijamas </h1>
+            
         </section>
 
         <div class="filters">
@@ -63,8 +61,7 @@
                 card.innerHTML = `
                     <div>
                         <span class="gift-tag">${item.categoria} · ${item.tienda}</span>
-                        <div class="gift-emoji">${item.emoji}</div>
-                        <h3 class="gift-title">${item.nombre}</h3>
+                        <div class="gift-foto">${item.foto ? `<img src="${item.foto}" alt="${item.nombre}" class="foto-regalo">` : item.emoji}</div>                        <h3 class="gift-title">${item.nombre}</h3>
                         <p class="gift-desc">${item.descripcion}</p>
                     </div>
                     <button class="btn-reserve" onclick="manejarReservaRopa('${item.id}', '${item.nombre}')">

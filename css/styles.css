@@ -311,9 +311,13 @@ body {
     width: fit-content;
 }
 
-.gift-emoji {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+.foto-regalo {
+   width: 180px;           
+    height: 180px;          
+    object-fit: cover;     
+    border-radius: 12px;    
+    display: block;       
+    margin: 12px auto;
 }
 
 .gift-title {

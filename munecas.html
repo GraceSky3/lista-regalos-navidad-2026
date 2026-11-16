@@ -88,7 +88,7 @@
                 const grid = document.createElement("div");
                 grid.className = "gifts-grid";
 
-                grupos[linea].forEach(m => {
+                              grupos[linea].forEach(m => {
                     const estaReservado = !!reservas[m.id];
                     const card = document.createElement("article");
                     card.className = `gift-card ${m.prioridad ? "priority" : ""} ${estaReservado ? "reserved" : ""}`;
@@ -96,6 +96,7 @@
                         ${m.prioridad ? '<span class="badge-priority">⭐ OPCIÓN 1</span>' : ''}
                         <div>
                             <span class="gift-tag">${m.linea}</span>
+                            ${m.foto ? `<div class="gift-foto"><img src="${m.foto}" alt="${m.nombre}" class="foto-regalo"></div>` : ''}
                             <h3 class="gift-title">${m.nombre}</h3>
                             <p class="gift-desc">${m.nota}</p>
                         </div>
@@ -105,6 +106,7 @@
                     `;
                     grid.appendChild(card);
                 });
+
 
                 section.appendChild(grid);
                 container.appendChild(section);
