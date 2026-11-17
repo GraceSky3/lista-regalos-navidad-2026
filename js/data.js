@@ -74,8 +74,13 @@ const REGALOS_DATA = {
             prioridad: true, 
             foto: "imagenes/nefera.webp",
             enlaces: [
-                { tienda: "Vinted (Opción 1)", url: "https://vinted.es/enlace-nefera-1" },
-                { tienda: "Vinted (Opción 2)", url: "https://vinted.es/enlace-nefera-2" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/3474035059-monster-high-nefera?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/10269779593-monster-high-nefera-de-nile-signature-g1-2012?referrer=catalog" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10237923805-monster-high-nefera-de-nil?referrer=catalog" },
+                { tienda: "Vinted (Opción 4)", url: "https://www.vinted.es/items/10844810175-monster-high-nefera-de-nile-basica?referrer=catalog" },
+                { tienda: "Vinted (Opción 5)", url: "https://www.vinted.es/items/4931971899-bambola-nefera-de-nile-monster-high?referrer=catalog" },
+                { tienda: "Vinted (Opción 6)", url: "https://www.vinted.es/items/7228809455-poupee-monster-high-nefera?referrer=catalog" }
+
             ]
         },
        /* { 
