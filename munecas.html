@@ -5,6 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🦇 Monster High - Lista de Deseos</title>
     <link rel="stylesheet" href="css/styles.css">
+   <style>
+        /* Estilos para el efecto de giro (Flip Card) */
+        .gift-card {
+            perspective: 1000px;
+            background: transparent !important;
+            border: none !important;
+            height: 380px;
+        }
+        .gift-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s ease;
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+        }
+        .gift-card.flipped .gift-card-inner {
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+        }
+        .gift-card-front, .gift-card-forefront {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 12px;
+            background: #fff;
+            border: 2px solid #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        /* Cara delantera por encima al inicio */
+        .gift-card-front {
+            z-index: 2;
+            transform: rotateY(0deg);
+        }
+        /* Cara trasera ya girada 180 grados */
+        .gift-card-forefront {
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            z-index: 1;
+            overflow-y: auto;
+            background: #fafafa;
+        }
+        .contenedor-enlaces {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .btn-vinted {
+            background-color: #09b1ba;
+            color: white;
+            padding: 8px 10px;
+            text-align: center;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .btn-vinted:hover {
+            opacity: 0.85;
+        }
+        .btn-girar-atras {
+            background: #e2e8f0;
+            border: none;
+            padding: 6px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <div id="snow-container"></div>
@@ -25,7 +105,7 @@
         <section class="hero" style="padding: 1.8rem;">
             <h1>🦇 Colección Monster High</h1>
             <p style="margin-bottom: 0;">
-                Organizadas por línea y colección. <strong>Nefera de Nile (Básica)</strong> es mi Opción 1 favorita ⭐
+                Haz clic en cualquier tarjeta para ver sus enlaces de Vinted por detrás. <strong>Nefera de Nile (Básica)</strong> es mi Opción 1 favorita ⭐
             </p>
         </section>
 
@@ -69,7 +149,6 @@
                 lineaSeleccionada === "Todas" || m.linea === lineaSeleccionada
             );
 
-            // Agrupar por línea
             const grupos = {};
             filtradas.forEach(m => {
                 if (!grupos[m.linea]) grupos[m.linea] = [];
@@ -88,25 +167,59 @@
                 const grid = document.createElement("div");
                 grid.className = "gifts-grid";
 
-                              grupos[linea].forEach(m => {
+                grupos[linea].forEach(m => {
                     const estaReservado = !!reservas[m.id];
+                    
+                    // Generar enlaces para la parte trasera
+                    let htmlEnlaces = "<p>No hay enlaces de Vinted disponibles.</p>";
+                    if (m.enlaces && m.enlaces.length > 0) {
+                        htmlEnlaces = '<div class="contenedor-enlaces">';
+                        m.enlaces.forEach(link => {
+                            htmlEnlaces += `<a href="${link.url}" target="_blank" class="btn-vinted">🛍️ ${link.tienda}</a>`;
+                        });
+                        htmlEnlaces += '</div>';
+                    }
+
                     const card = document.createElement("article");
                     card.className = `gift-card ${m.prioridad ? "priority" : ""} ${estaReservado ? "reserved" : ""}`;
+                    
                     card.innerHTML = `
-                        ${m.prioridad ? '<span class="badge-priority">⭐ OPCIÓN 1</span>' : ''}
-                        <div>
-                            <span class="gift-tag">${m.linea}</span>
-                            ${m.foto ? `<div class="gift-foto"><img src="${m.foto}" alt="${m.nombre}" class="foto-regalo"></div>` : ''}
-                            <h3 class="gift-title">${m.nombre}</h3>
-                            <p class="gift-desc">${m.nota}</p>
+                        <div class="gift-card-inner">
+                            <!-- CARA FRONTAL -->
+                            <div class="gift-card-front">
+                                ${m.prioridad ? '<span class="badge-priority">⭐ OPCIÓN 1</span>' : ''}
+                                <div>
+                                    <span class="gift-tag">${m.linea}</span>
+                                    ${m.foto ? `<div class="gift-foto"><img src="${m.foto}" alt="${m.nombre}" class="foto-regalo"></div>` : ''}
+                                    <h3 class="gift-title">${m.nombre}</h3>
+                                    <p class="gift-desc">${m.nota}</p>
+                                </div>
+                                <button class="btn-reserve" onclick="event.stopPropagation(); manejarReservaMuneca('${m.id}', '${m.nombre}', '${m.linea}')">
+                                    ${estaReservado ? "✅ ¡Reservada! (Quitar)" : "🎁 ¡Yo la regalo!"}
+                                </button>
+                            </div>
+
+                            <!-- CARA TRASERA (ENLACES) -->
+                            <div class="gift-card-forefront">
+                                <div>
+                                    <h3 class="gift-title">🔗 Enlaces de Vinted</h3>
+                                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">${m.nombre}</p>
+                                    ${htmlEnlaces}
+                                </div>
+                                <button class="btn-girar-atras">🔄 Volver</button>
+                            </div>
                         </div>
-                        <button class="btn-reserve" onclick="manejarReservaMuneca('${m.id}', '${m.nombre}', '${m.linea}')">
-                            ${estaReservado ? "✅ ¡Reservada por mí! (Quitar)" : "🎁 ¡Yo la regalo!"}
-                        </button>
                     `;
+
+                    // Evento para girar al hacer clic en la tarjeta (evitando el botón de reserva)
+                    card.addEventListener("click", (e) => {
+                        // Si hace clic en un enlace de Vinted, dejamos que abra la pestaña normal
+                        if (e.target.tagName === 'A') return;
+                        card.classList.toggle("flipped");
+                    });
+
                     grid.appendChild(card);
                 });
-
 
                 section.appendChild(grid);
                 container.appendChild(section);

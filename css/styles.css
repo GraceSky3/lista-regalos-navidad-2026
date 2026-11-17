@@ -402,3 +402,48 @@ footer {
     font-size: 0.9rem;
     opacity: 0.9;
 }
+
+/* Contenedor principal que da la perspectiva 3D */
+.gift-card {
+    perspective: 1000px;
+    background: transparent !important; /* Quitamos el fondo antiguo para que funcione el giro */
+    border: none !important;
+}
+
+/* El elemento interno que rota */
+.gift-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-style3d;
+    cursor: pointer;
+}
+
+/* Clase que se activa al hacer clic para girar */
+.gift-card.flipped .gift-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Las dos caras de la tarjeta */
+.gift-card-front, .gift-card-forefront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: white; /* O el color de fondo que tuviera tu tarjeta original */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* La parte trasera (donde irán los enlaces) */
+.gift-card-forefront {
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
