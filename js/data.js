@@ -113,7 +113,11 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/directora.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-directora" }
+            { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/7552661083-monster-high-madame-sans-tete-et-son-cheval?referrer=catalog" },
+            { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/6210986563-monster-professeure-sans-tete?referrer=catalog" },
+            { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/9803596297-proviseur-sans-tete-et-cauchemars-monster-high?referrer=catalog" },        
+            { tienda: "Vinted (Opción 4)", url: "https://www.vinted.es/items/7573241681-monster-high-directrice?referrer=catalog" },
+            { tienda: "Vinted (Opción 5)", url: "https://www.vinted.es/items/10224604824-poupee-mme-le-proviseur-cheval-monster-high?referrer=catalog" },
             ]
         },
         // DAWN OF THE DANCE
@@ -125,7 +129,9 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/deuce.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-deuce" }
+                { tienda: "Wallpop", url: "https://es.wallapop.com/item/monster-high-dawn-of-the-dance-leer-precios-1248321442" },
+                { tienda: "Vinted (Opción 1 )", url: "https://www.vinted.es/items/9989096851-deuce-gorgon-de-monster-high-g1?referrer=catalog" },
+                { tienda: "Vinted (Opción )", url: "https://www.vinted.es/items/10654387163-deuce-gorgon-de-la-coleccion-dawn-of-the-dance?referrer=catalog" },
             ] 
         },
         // DEAD TIRED
@@ -137,7 +143,7 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/clawdeen pj.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-clawdeen-pj" }
+           
             ] 
         },
         { 
