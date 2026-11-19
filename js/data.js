@@ -166,7 +166,10 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/clawdeen 1600.avif",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-clawdeen-1600" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/10723959333-monster-high-clawdeen-wolf-sweet-1600-completa-com-vestido-extra?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/7810057724-poupee-monster-high-clawdeen-wolf-1600-anniversaire?referrer=catalog" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10844152213-clawdeen-sweet-16000-monster-high?referrer=catalog" },
+                { tienda: "Vinted (Opción 4)", url: "https://www.vinted.es/items/9733818983-clawdeen-1600?referrer=catalog" },
             ] 
         },
         { 
@@ -177,7 +180,9 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/frankie 1600.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-frankie-1600" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/4679336460-frankie-sweet-1600?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/6636643141-frankie-stein-monster-high-scary-brithday-sweet-1600?referrer=catalog" },
+
             ] 
         },
         // ROLLER MAZE
