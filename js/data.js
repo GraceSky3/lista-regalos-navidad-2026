@@ -194,7 +194,13 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/abby rm.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-abby-rm" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/10904431040-monster-high-roller-maze-abbey?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/10042632351-monster-high-abby?referrer=catalog" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/9477842125-bambola-monster-high-roller-maze?referrer=catalog" },
+                { tienda: "Vinted (Opción 4)", url: "https://www.vinted.es/items/10469653130-monster-high-roller-maze-doll-abbey-bominable?referrer=catalog" },
+                { tienda: "Vinted (Opción 5)", url: "https://www.vinted.es/items/9477842125-bambola-monster-high-roller-maze?referrer=catalog" },
+
+                
             ] 
         },
         { 
@@ -205,7 +211,13 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/gholuia rm.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-ghoulia-rm" }
+                { tienda: "Vinted (Opción 1)", url: "" },
+                { tienda: "Vinted (Opción )", url: "" },
+                { tienda: "Vinted (Opción )", url: "" },
+                { tienda: "Vinted (Opción )", url: "" },
+                { tienda: "Vinted (Opción )", url: "" },
+
+
             ] 
         },
         // DOT DEAD GORGEOUS
