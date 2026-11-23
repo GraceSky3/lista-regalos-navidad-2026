@@ -271,7 +271,9 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/lagoona pd.webp",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-lagoona-pd" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/10726676752-monster-high?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/4323245112-muneca-lagoona-blue-picture-day-monster-high?referrer=catalog" },
+               
             ] 
         },
         { 
@@ -282,7 +284,10 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/dracu pd.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-draculaura-pd" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/7745873304-monster-high-draculaura?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "" },
+                { tienda: "Vinted (Opción 3)", url: "" },
+                { tienda: "Vinted (Opción 4)", url: "" },
             ] 
         },
         { 
@@ -293,7 +298,10 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/Abby pd.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-abby-pd" }
+                { tienda: "Vinted (Opción 1)", url: "" },
+                { tienda: "Vinted (Opción 2)", url: "" },
+                { tienda: "Vinted (Opción 3)", url: "" },
+                { tienda: "Vinted (Opción 4)", url: "" },
             ] 
         },
         { 
@@ -304,7 +312,10 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/opereta pd.webp",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-operetta-pd" }
+                { tienda: "Vinted (Opción 1)", url: "" },
+                { tienda: "Vinted (Opción 2)", url: "" },
+                { tienda: "Vinted (Opción 3)", url: "" },
+                { tienda: "Vinted (Opción 4)", url: "" },
             ] 
         },
         { 
