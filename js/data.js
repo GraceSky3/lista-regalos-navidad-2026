@@ -211,12 +211,8 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/gholuia rm.jpg",
             enlaces: [
-                { tienda: "Vinted (Opción 1)", url: "" },
-                { tienda: "Vinted (Opción )", url: "" },
-                { tienda: "Vinted (Opción )", url: "" },
-                { tienda: "Vinted (Opción )", url: "" },
-                { tienda: "Vinted (Opción )", url: "" },
-
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/10429459961-monster-high-ghoulia-yelps?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/10904419507-monster-high-roller-maze-ghoulia?referrer=catalog" },
 
             ] 
         },
@@ -229,7 +225,11 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/lagoona dg.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-lagoona-dg" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/10867804194-lagoona-blue-dot-dead-gorgeous?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/10626449992-monster-high-lagoona-blue-dot-dead-gorgeous?referrer=catalog" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/5890381564-dot-dead-gorgeous-lagoona-blue-monster-high?referrer=catalog" },
+                { tienda: "Vinted (Opción 4)", url: "https://www.vinted.es/items/10084493944-monster-high-lagoona-blue-dot-dead-gorgeous?referrer=catalog" },
+                     
             ] 
         },
         { 
@@ -240,7 +240,11 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/spectra dg.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-spectra-dg" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/10828566533-spectra-vondergeist-dot-dead-gorgeous-2012?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/10922628890-spectra-vondergeist-dor-dead-gorgeus?referrer=catalog" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10122486709-spectra-dot-dead-gorgeous?referrer=catalog" },
+                { tienda: "Vinted (Opción 4)", url: "https://www.vinted.es/items/4106443260-spectra-vondergeist?referrer=catalog" },
+                { tienda: "Vinted (Opción 5)", url: "https://www.vinted.es/items/9279687465-muneca-spectra-vondergeist-edicion-dot-dead-gorgeous-fiesta-de-lunares-g1-de-mattel-2012?referrer=catalog" },
             ] 
         },
         { 
@@ -251,7 +255,11 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/opereta dg.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-operetta-dg" }
+                  { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/10627199651-monster-high-operetta-dot-dead-gorgeous?referrer=catalog" },         
+                    { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/10900954776-operetta-dot-dead-gorgeous?referrer=catalog" },
+                    { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10826031083-operetta-dot-dead-gorgeous?referrer=catalog" },
+                    { tienda: "Vinted (Opción 4)", url: "https://www.vinted.es/items/10455219124-operetta-g1-dot-dead-gorgeous?referrer=catalog" },    
+                
             ] 
         },
         // PICTURE DAY
