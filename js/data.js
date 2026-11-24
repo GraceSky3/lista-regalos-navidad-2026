@@ -131,7 +131,8 @@ const REGALOS_DATA = {
             enlaces: [
                 { tienda: "Wallpop", url: "https://es.wallapop.com/item/monster-high-dawn-of-the-dance-leer-precios-1248321442" },
                 { tienda: "Vinted (Opción 1 )", url: "https://www.vinted.es/items/9989096851-deuce-gorgon-de-monster-high-g1?referrer=catalog" },
-                { tienda: "Vinted (Opción )", url: "https://www.vinted.es/items/10654387163-deuce-gorgon-de-la-coleccion-dawn-of-the-dance?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/10899207852-poupee-monster-high-deuce-dawn-of-the-dance" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10654387163-deuce-gorgon-de-la-coleccion-dawn-of-the-dance?referrer=catalog" },
             ] 
         },
         // DEAD TIRED
@@ -284,10 +285,10 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/dracu pd.jpg",
             enlaces: [
-                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/7745873304-monster-high-draculaura?referrer=catalog" },
-                { tienda: "Vinted (Opción 2)", url: "" },
-                { tienda: "Vinted (Opción 3)", url: "" },
-                { tienda: "Vinted (Opción 4)", url: "" },
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/5480130962-monster-high?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://es.wallapop.com/item/monster-high-draculaura-g1-picture-day-1305883219" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10816444826-monster-high-draculaura?referrer=catalog" },
+                { tienda: "Vinted (Opción 4)", url: "https://es.wallapop.com/item/muneca-monsterhigh-1326083108" },
             ] 
         },
         { 
@@ -298,10 +299,13 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/Abby pd.jpg",
             enlaces: [
-                { tienda: "Vinted (Opción 1)", url: "" },
-                { tienda: "Vinted (Opción 2)", url: "" },
-                { tienda: "Vinted (Opción 3)", url: "" },
-                { tienda: "Vinted (Opción 4)", url: "" },
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/10924523591-muneca-abbey-abominable-monster-high-picture-day?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/8516259503-poupee-monster-high-picture-day-abbey-bominable-amie-de-draculaura?referrer=catalog" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10158917412-abbey-picture-day?referrer=catalog" },
+                { tienda: "Vinted (Opción 4)", url: "https://www.vinted.es/items/3014978044-abbey-bominable-monster-high?referrer=catalog" },
+                { tienda: "Vinted (Opción 5)", url: "https://www.vinted.es/items/8443329241-poupee-monster-high?referrer=catalog" },
+                { tienda: "Vinted (Opción 6)", url: "https://www.vinted.es/items/6091247327-monster-high-picture-day-abbey-bominable?referrer=catalog" },
+                { tienda: "Vinted (Opción 7)", url: "https://www.vinted.es/items/6920652773-abbey-monster-high?referrer=catalog" },
             ] 
         },
         { 
