@@ -7,7 +7,7 @@ const REGALOS_DATA = {
             tienda: "Primark / Similar",
             descripcion: "Calcetines zapatilla Pingu con suela antideslizante",
             prioridad: false,
-            foto: "Pingu.webp"
+            foto: "imagenes/Pingu.webp"
         },
         {
             id: "ropa-2",
@@ -16,7 +16,7 @@ const REGALOS_DATA = {
             tienda: "Primark / Similar",
             descripcion: "Pantuflas peluditas rosa pastel con bordado de bastones de caramelo y lacito rosa.",
             prioridad: false,
-            foto: "caramelo.webp"
+            foto: "imagenes/caramelo.webp"
         },
         {
             id: "ropa-3",
@@ -25,7 +25,7 @@ const REGALOS_DATA = {
             tienda: "Primark / Similar",
             descripcion: "Pantuflas tipo botín blanco borreguito con fresitas, corazones y lazos rojos bordados.",
             prioridad: false,
-            foto: "fresas.webp"
+            foto: "imagenes/fresas.webp"
         },
         {
             id: "ropa-4",
@@ -34,7 +34,7 @@ const REGALOS_DATA = {
             tienda: "Primark / Similar",
             descripcion: "Pantuflas destalonadas blanco borreguito con pequeños lazos rojos y puntitos bordados.",
             prioridad: false,
-            foto: "lazitos.webp"
+            foto: "imagenes/lazitos.webp"
         },
         {
             id: "ropa-5",
@@ -43,7 +43,7 @@ const REGALOS_DATA = {
             tienda: "Primark (New in Bambi Pyjamas)",
             descripcion: "Pantalón largo de tejido polar súper suave estampado cervatillo con lazo rosa en la cintura.",
             prioridad: false,
-            foto: "pantalon pj.png"
+            foto: "imagenes/pantalon pj.png"
         },
         {
             id: "ropa-6",
@@ -52,7 +52,7 @@ const REGALOS_DATA = {
             tienda: "Primark (Disney Bambi)",
             descripcion: "Bata de estar por casa estampado cervatillo con orejitas en la capucha y bordado 'Disney Bambi' rosa.",
             prioridad: false,
-            foto: "batamanta.jpg"
+            foto: "imagenes/batamanta.jpg"
         },
         {
             id: "ropa-7",
@@ -61,7 +61,7 @@ const REGALOS_DATA = {
             tienda: "Primark (Disney Bambi)",
             descripcion: "Conjunto de camiseta de tirantes y pantalón corto rosa claro con estampado de Bambi.",
             prioridad: false,
-            foto: "pijama corto.png"
+            foto: "imagenes/pijama corto.png"
         }
     ],
     munecas: [
@@ -182,7 +182,8 @@ const REGALOS_DATA = {
             foto: "imagenes/frankie 1600.jpg",
             enlaces: [
                 { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/4679336460-frankie-sweet-1600?referrer=catalog" },
-                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/6636643141-frankie-stein-monster-high-scary-brithday-sweet-1600?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/8299341864-frankie-stein-sweet-1600?referrer=catalog" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/6636643141-frankie-stein-monster-high-scary-brithday-sweet-1600?referrer=catalog" },
 
             ] 
         },
@@ -316,10 +317,10 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/opereta pd.webp",
             enlaces: [
-                { tienda: "Vinted (Opción 1)", url: "" },
-                { tienda: "Vinted (Opción 2)", url: "" },
-                { tienda: "Vinted (Opción 3)", url: "" },
-                { tienda: "Vinted (Opción 4)", url: "" },
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/6400280488-monster-high-operetta?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/8491379046-monster-high-operetta?referrer=catalog" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10952525165-muneca-monster-high-operetta?referrer=catalog" },
+                { tienda: "Vinted (Opción 4)", url: "https://www.vinted.es/items/10573066437-poupee-operetta-g1-picture-day-monster-high?referrer=catalog" },
             ] 
         },
         { 
@@ -330,7 +331,9 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/frankie pd.avif",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-frankie-pd" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/4836857435-monster-high-frankie-stein?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/10543574963-monster-high-frankie-stein-picture-day?referrer=catalog" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10679502338-frankie-picture-day?referrer=catalog" },
             ] 
         },
         // MUSIC FESTIVAL
@@ -342,7 +345,10 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/abby mf.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-abby-mf" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/2560574791-abbey-bominable" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/7710551711-abby-bambola?referrer=catalog" },
+                { tienda: "Vinted (Opción 3)", url: "https://es.wallapop.com/item/muneca-monster-high-abbey-bominable-festival-1172836064" },
+                { tienda: "Vinted (Opción 4)", url: "https://www.vinted.es/items/10290641932-abbey-bominable?referrer=catalog" },
             ] 
         },
         { 
@@ -353,7 +359,9 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/clawdeen mf.png",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-clawdeen-mf" }
+                 { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/10791903672-muneca-monster-high-clawdeen-wolf-music-festival-2013?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/10775545725-muneca-monster-high-claedeen-wolf-g1?referrer=catalog" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10425599504-monster-high-clawdeen-wolf-music-festival-bambola-mattel-da-collezione?referrer=catalog" },
             ] 
         },
         // GHOULS NIGHT OUT
@@ -365,7 +373,10 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/rochelle gn.png",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-rochelle-gn" }
+                { tienda: "Vinted (Opción 1)", url: "" },
+                { tienda: "Vinted (Opción 2)", url: "" },
+                { tienda: "Vinted (Opción 3)", url: "" },
+                { tienda: "Vinted (Opción 4)", url: "" },
             ] 
         },
         { 
@@ -376,7 +387,9 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/clawdeen gn.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-clawdeen-gn" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/10687427201-clawdeen-wolf-dans-sa-version-ghouls-night-out?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "https://www.vinted.es/items/10562882185-bmb-bambola-monster-high-clawdeen-ghouls-night-out?referrer=catalog" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10836464391-clawdeen-ghouls-night-out-monster-high?referrer=catalog" },
             ] 
         },
         { 
@@ -387,7 +400,10 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/lagoona gn.jpg",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-lagoona-gn" }
+               { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/5826246475-monster-high?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10948040277-lagoona-blue-ghouls-night-out?referrer=catalog" },
+                { tienda: "Vinted (Opción 4)", url: "" },
             ] 
         },
         { 
@@ -398,7 +414,10 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/venus gn.png",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-venus-gn" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/10907097714-venus-mcflytrapbeetle" },
+                { tienda: "Vinted (Opción 2)", url: "" },
+                { tienda: "Vinted (Opción 3)", url: "https://www.vinted.es/items/10067618162-monster-high-venus-ghouls-night-out?referrer=catalog" },
+                { tienda: "Vinted (Opción 4)", url: "" },
             ] 
         },
         { 
@@ -409,7 +428,10 @@ const REGALOS_DATA = {
             prioridad: false, 
             foto: "imagenes/spectra gn.webp",
             enlaces: [
-                { tienda: "Vinted", url: "https://vinted.es/enlace-spectra-gn" }
+                { tienda: "Vinted (Opción 1)", url: "https://www.vinted.es/items/9917872226-spectra-ghouls-night-out?referrer=catalog" },
+                { tienda: "Vinted (Opción 2)", url: "" },
+                { tienda: "Vinted (Opción 3)", url: "" },
+                { tienda: "Vinted (Opción 4)", url: "" },
             ] 
         },
         // FRIGHTS, CAMERA, ACTION!
